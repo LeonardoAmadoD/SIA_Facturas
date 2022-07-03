@@ -5,14 +5,15 @@ public class EntidadJuridica {
 	Long ruc;
 	int telefono;
 	String email;
+	String direccion;
 	
-	public EntidadJuridica(int codigo, String nombre, Long ruc, int telefono, String email) {
-		super();
+	public EntidadJuridica(int codigo, String nombre, Long ruc, int telefono, String email, String direccion) {
 		this.codigo = codigo;
 		this.nombre = nombre;
 		this.ruc = ruc;
 		this.telefono = telefono;
 		this.email = email;
+		this.direccion = direccion;
 	}
 
 	public String getNombre() {
@@ -45,6 +46,10 @@ public class EntidadJuridica {
 
 	public Long getRUC() {
 		return this.ruc;
+	}
+
+	public String getDireccion() {
+		return direccion;
 	}
 	
 }

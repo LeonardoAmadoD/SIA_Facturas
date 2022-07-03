@@ -2,8 +2,8 @@
 public class Main {
 		
 	public static void main(String[] args) {
-		Empresa e1 = new Empresa(101, "Empresa x", 10325778491L, 921969057, "contacto@empresaX.com");
-		Cliente c1 = new Cliente(301, "Cliente x", 10145874575L, 967522091, "cliente@gmail.com");
+		Empresa e1 = new Empresa(101, "Empresa x", "Empresa x SA",10325778491L, 921969057, "contacto@empresaX.com", "Direccion Empresa");
+		Cliente c1 = new Cliente(301, "Cliente x", 10145874575L, 967522091, "cliente@gmail.com", "Direccion Cliente");
 		Moneda m1 = new Moneda(401, "Nuevo Sol", "S/.");
 		//
 		Producto p1 = new Producto(801, "Producto 1", 20, m1);

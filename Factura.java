@@ -85,19 +85,23 @@ public class Factura {
 	public String toString() {
 		String str = "\n";
 		str += "|####################################\n";
-		str += "|- \t" + this.empresa.getNombre() + "\t -\n";
-		str += "|- \t" + this.empresa.getRUC() + "\t -\n";
-		str += "|Codigo: " + this.cod_factura + "\n";
-		str += "|Emision: " + this.emision + "\n";
-		str += "|Cliente: " + this.cliente.getNombre() + "\n";
-		str += "|RUC: " + this.cliente.getRUC() + "\n";
-		str += "|Moneda: " + this.moneda.getDescripcion() + "\n";
+		str += "|" + this.empresa.getNombre() + "\n";
+		str += "|" + this.empresa.getRazonSocial() + "\n";
+		str += "|" + this.empresa.getRUC() + "\n";
+		str += "|" + this.empresa.getDireccion() + "\n";
 		str += "|____________________________________\n";
-		str += "|Producto \tU \tPrecio\n";
+		str += "|Codigo: \t" + this.cod_factura + "\n";
+		str += "|Emision: \t" + this.emision + "\n";
+		str += "|Cliente: \t" + this.cliente.getNombre() + "\n";
+		str += "|RUC: \t \t" + this.cliente.getRUC() + "\n";
+		str += "|Dir. Cliente: \t" + this.cliente.getDireccion() + "\n";
+		str += "|Moneda: \t" + this.moneda.getDescripcion() + "\n";
+		str += "|____________________________________\n";
+		str += "|Producto \t|U \t|Precio\n";
 		str += "|------------------------------------\n";
 		for (ProductoFactura p : productos) {
 			if(p != null)
-				str += "|" + p.getProducto().getDescripcion() + "\t" + p.getUnidades() + "\t" + (p.getProducto().getPrecio() * p.getUnidades()) + "\n";
+				str += "|" + p.getProducto().getDescripcion() + "\t|" + p.getUnidades() + "\t|" + (p.getProducto().getPrecio() * p.getUnidades()) + "\n";
 		}
 		str += "|____________________________________\n";
 		str += "|Valor de Venta: \t" + this.moneda.getSimbolo() + this.valorVenta + "\n"; 
