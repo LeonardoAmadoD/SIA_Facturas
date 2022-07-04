@@ -10,5 +10,9 @@ public class Empresa extends EntidadJuridica {
 	public String getRazonSocial() {
 		return razonSocial;
 	}
-	
+
+        @Override
+        public String toString() {
+            return "RazonSocial: " + razonSocial + "\nRUC: " + this.ruc + "\te-mail: " + this.email + "\nTelefono: " + this.telefono + "\tDireccion: " + this.direccion;
+        }
 }

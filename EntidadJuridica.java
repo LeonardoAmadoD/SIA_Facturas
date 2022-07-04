@@ -51,5 +51,10 @@ public class EntidadJuridica {
 	public String getDireccion() {
 		return direccion;
 	}
+
+    @Override
+    public String toString() {
+        return nombre + "\t" + ruc + "\t" + telefono + "\t" + email + "\t" + direccion;
+    }
 	
 }

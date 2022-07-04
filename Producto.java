@@ -32,4 +32,9 @@ public class Producto {
 		return this.moneda;
 	}
 
+    @Override
+    public String toString() {
+        return codigo + "\t" + descripcion + "\t" + precio + " " + moneda.getDescripcion();
+    }
+
 }
